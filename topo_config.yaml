@@ -1,0 +1,15 @@
+core_switch_number: 1  # 核心交换机数
+edge_switch_number: 4  # 边缘交换机数
+host_number: 2  # 边缘交换机连接主机数
+flow_limit: [3000, 1500, 3000, 3000, 3000]  # 交换机流表项上限
+
+#background_traffic_host: h1
+#background_traffic_file: rep1_100.pcap
+background_traffic_host: ['h8']   # 重放背景流的主机
+background_traffic_config: '-x 0.5'   # 0.5倍速重放
+background_traffic_file: 'univ1_pt1_1.pcap'   # 背景流文件
+# background_traffic_file: 'univ1_pt1_1_NoARP.pcap'   # 背景流文件
+loop: True   # 背景流循环重放
+D_ITG: True
+
+
